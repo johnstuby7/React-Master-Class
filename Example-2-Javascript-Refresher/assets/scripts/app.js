@@ -88,3 +88,19 @@
 //   ...user
 // };
 // console.log(extendedUser)
+
+// Control Structure Example:
+// If /else example
+// if (10 == 11) {
+  
+// } else if () {
+
+// } else {
+
+// }
+
+// For example:
+// const hobbies = ["hello", "goodbye"];
+// for (const hobby of hobbies) {
+//   console.log(hobby)
+// } 
