@@ -70,5 +70,21 @@
 // } 
 
 // Destructure example: remap/change a existing array
-const [firstName, lastName] = ["joseph", "kling"];
-console.log(firstName, lastName);
+// const [firstName, lastName] = ["joseph", "kling"];
+// console.log(firstName, lastName);
+
+// Spread operator: Pulls out values from a array and adds them as comma seperated values to another array
+// const hobbies = ["sports", "cooking"];
+// const newHobbies = ["reading"];
+// const mergedHobbies = [...hobbies, ...newHobbies]
+
+// Object example of spread operator:
+// const user = {
+//   name: "steph",
+//   age: 45
+// };
+// const extendedUser = {
+//   isAdmin: true,
+//   ...user
+// };
+// console.log(extendedUser)
