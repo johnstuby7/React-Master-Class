@@ -9,6 +9,10 @@
 - Parameter: React parameters are used in React routing, where we have parameters we need to access in the route. For example, if we had a route such as <Route path=”/:id” /> we could access that particular string or value in the route by calling the useParams hook. let { id } = useParams();
 - Arrow Function: The arrow function is basically an anonymous function which accepts a fixed number or arguments, and operates in the context of the enclosing scope.
 - Spread operator: Pulls out values from a array and adds them as comma seperated values to another array
+- Primitive Values: String, number, bigint, boolean, undefined, symbol, and null are the seven primitive data types
+- Reference values: objects are considered reference values.
+- Components: are independent and reusable bits of code.
+- Declarative Approach: we describe the final UI we want for each scene. We may structure the component differently
 
 # Notes:
 
