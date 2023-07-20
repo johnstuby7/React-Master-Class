@@ -104,3 +104,29 @@
 // for (const hobby of hobbies) {
 //   console.log(hobby)
 // } 
+
+// Using Functions as values:
+// function handleTimeout() {
+//   console.log("Timed out!");
+// }
+
+// const handleTimeout2 = () => {
+//   console.log("Timed out ... again!");
+// };
+
+// setTimeout(handleTimeout, 2000);
+// setTimeout(handleTimeout2, 3000);
+// setTimeout(() => {
+//   console.log("More timing out...");
+// }, 4000);
+
+// Defining FUnctions inside functions:
+// function init() {
+//   function greet() {
+//     console.log(“Hi!“);
+//   }
+
+//   greet();
+// }
+
+// init();
