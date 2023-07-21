@@ -16,6 +16,8 @@
 
 # Notes:
 
+-
+
 ## Creating react projects: browser based vs local Development
 
 ### To create a new react project:
