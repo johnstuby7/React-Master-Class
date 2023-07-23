@@ -16,7 +16,8 @@
 
 # Notes:
 
--
+- For components it should be CamelCase
+- custom made elements will be uppercase like <ExpenseItem></ExpenseItem> normal tags will be lowercase <p></p>
 
 ## Creating react projects: browser based vs local Development
 
