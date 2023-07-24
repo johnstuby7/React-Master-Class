@@ -13,6 +13,7 @@
 - Reference values: objects are considered reference values.
 - Components: are independent and reusable bits of code.
 - Declarative Approach: we describe the final UI we want for each scene. We may structure the component differently
+- Props: Props are arguments passed into React components.
 
 # Notes:
 
@@ -38,4 +39,89 @@
 //   console.log("hello");
 //   return username + message;
 // }; -->
+```
+
+## Props examples:
+
+In app.js we have defined a array of values, since we have the <expenseItem> in app, and it is passing values to it, as long
+as in the expenseItem file we ensure that the function accepts props, then the expense item will be able to use all the
+data passed to it
+
+App.js:
+
+```
+import ExpenseItem from "./components/ExpenseItem";
+
+function App() {
+  const expenses = [
+    {
+      id: "e1",
+      title: "Toilet Paper",
+      amount: 94.12,
+      date: new Date(2020, 7, 14),
+    },
+    { id: "e2", title: "New TV", amount: 799.49, date: new Date(2021, 2, 12) },
+    {
+      id: "e3",
+      title: "Car Insurance",
+      amount: 294.67,
+      date: new Date(2021, 2, 28),
+    },
+    {
+      id: "e4",
+      title: "New Desk (Wooden)",
+      amount: 450,
+      date: new Date(2021, 5, 12),
+    },
+  ];
+  return (
+    <div>
+      <h2>Let's get started!</h2>
+      <ExpenseItem
+        title={expenses[0].title}
+        amount={expenses[0].amount}
+        date={expenses[0].date}
+      ></ExpenseItem>
+      <ExpenseItem
+        title={expenses[1].title}
+        amount={expenses[1].amount}
+        date={expenses[1].date}
+      ></ExpenseItem>
+      <ExpenseItem
+        title={expenses[2].title}
+        amount={expenses[2].amount}
+        date={expenses[2].date}
+      ></ExpenseItem>
+      <ExpenseItem
+        title={expenses[3].title}
+        amount={expenses[3].amount}
+        date={expenses[3].date}
+      ></ExpenseItem>
+    </div>
+  );
+}
+
+export default App;
+
+```
+
+ExpenseItem.js:
+
+```
+import "./ExpenseItem.css";
+
+function ExpenseItem(props) {
+  return (
+    <div className="expense-item">
+      <div>{props.date}</div>
+      <div className="expense-item__description">
+        <h2>{props.title}</h2>
+        <div className="expense-item__price">{props.amount}</div>
+      </div>
+    </div>
+  );
+}
+
+export default ExpenseItem;
+
 ```
