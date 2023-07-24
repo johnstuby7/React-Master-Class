@@ -134,3 +134,27 @@ expenses[0]
 
 or in the recieving file, you can pass it the props you want it to use like so:
 function ExpenseItem(date, price, title)
+
+## React.createElement example
+
+Instead of doing:
+
+```
+   return (
+     <div>
+       <h2>Let's get started!</h2>
+       <Expenses items={expenses} />
+     </div>
+   );
+```
+
+you can instead do:
+
+```
+  return React.createElement(
+    "div",
+    {},
+    React.createElement("h2", {}, "Let's get started!"),
+    React.createElement(Expenses, { items: expenses })
+  );
+```
