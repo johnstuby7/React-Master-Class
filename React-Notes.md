@@ -125,3 +125,11 @@ function ExpenseItem(props) {
 export default ExpenseItem;
 
 ```
+
+### Different ways of using props:
+
+You can instead just call all the data for a specific element like so:
+expenses[0]
+
+or in the recieving file, you can pass it the props you want it to use like so:
+function ExpenseItem(date, price, title)
