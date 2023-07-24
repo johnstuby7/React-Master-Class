@@ -1,6 +1,8 @@
 # Good to know
 
 - Alternative to function keyword: const App = () => { instead of function App() {}
+- What is UseState Hook: useState is React Hook that allows you to add state to a functional component. It returns an array with two values: the current state and a function to update it.
+- const [title, setTitle] = useState(props.title); First element is the current value, the scond value is a function update the state of the field
 
 # Terminology:
 
@@ -17,6 +19,7 @@
 - Declarative Approach: we describe the final UI we want for each scene. We may structure the component differently
 - Props: Props are arguments passed into React components.
 - Composition: is a development pattern based on React's original component model where we build components from other components using explicit defined props or the implicit children prop
+- State: The state is a built-in React object that is used to contain data or information about the component.
 
 # Notes:
 
@@ -185,4 +188,42 @@ function ExpenseItem(props) {
 }
 
 export default ExpenseItem;
+```
+
+## Example of UseState functionality:
+
+- The following example will update the value of the title on button click, it does this with the useState function, the first value is
+- the current value of title and the second value is the function that is used to update the state of title.
+
+```
+import React, { useState } from "react";
+
+import "./ExpenseItem.css";
+import ExpenseDate from "./ExpenseDate";
+import Card from "../UI/Card";
+
+const ExpenseItem = (props) => {
+  const [title, setTitle] = useState(props.title);
+  // function ExpenseItem(props) {
+
+  const clickHandler = () => {
+    setTitle("Updated");
+    console.log(title);
+  };
+
+  return (
+    <Card className="expense-item">
+      <ExpenseDate date={props.date} />
+      <div className="expense-item__description">
+        <h2>{title}</h2>
+        <div className="expense-item__price">{props.amount}</div>
+      </div>
+      <button onClick={clickHandler}>Change Title</button>
+    </Card>
+  );
+};
+
+export default ExpenseItem;
+
+
 ```
