@@ -1,5 +1,7 @@
 # Good to know
 
+- Alternative to function keyword: const App = () => { instead of function App() {}
+
 # Terminology:
 
 - Constants: Work like variables, but must not be reassigned
