@@ -160,3 +160,29 @@ you can instead do:
     React.createElement(Expenses, { items: expenses })
   );
 ```
+
+## Listening to events and event handlers:
+
+- onClick uses a function to perform a action
+- OnClick is a event listener, the clickhandler is a event that is triggered on button click, we are able to listen to the event being triggered
+
+```
+function ExpenseItem(props) {
+  const clickHandler = () => {
+    console.log("Clicked");
+  };
+
+  return (
+    <Card className="expense-item">
+      <ExpenseDate date={props.date} />
+      <div className="expense-item__description">
+        <h2>{props.title}</h2>
+        <div className="expense-item__price">{props.amount}</div>
+      </div>
+      <button onClick={clickHandler}>Change Title</button>
+    </Card>
+  );
+}
+
+export default ExpenseItem;
+```
