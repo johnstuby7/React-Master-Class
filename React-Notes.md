@@ -14,6 +14,7 @@
 - Components: are independent and reusable bits of code.
 - Declarative Approach: we describe the final UI we want for each scene. We may structure the component differently
 - Props: Props are arguments passed into React components.
+- Composition: is a development pattern based on React's original component model where we build components from other components using explicit defined props or the implicit children prop
 
 # Notes:
 

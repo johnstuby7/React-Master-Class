@@ -4,7 +4,6 @@ import ExpenseItem from "./ExpenseItem";
 function Expenses(props) {
   return (
     <div className="expenses">
-      <h2>Let's get started!</h2>
       <ExpenseItem
         title={props.items[0].title}
         amount={props.items[0].amount}
