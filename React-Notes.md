@@ -2,7 +2,9 @@
 
 - Alternative to function keyword: const App = () => { instead of function App() {}
 - What is UseState Hook: useState is React Hook that allows you to add state to a functional component. It returns an array with two values: the current state and a function to update it.
-- const [title, setTitle] = useState(props.title); First element is the current value, the scond value is a function update the state of the field
+- USESTATE:
+  - You have seperate states even if you create a component more then once
+  - const [title, setTitle] = useState(props.title); First element is the current value, the scond value is a function to update the state of the field
 
 # Terminology:
 
@@ -194,6 +196,7 @@ export default ExpenseItem;
 
 - The following example will update the value of the title on button click, it does this with the useState function, the first value is
 - the current value of title and the second value is the function that is used to update the state of title.
+- You have seperate states even if you create a component more then once
 
 ```
 import React, { useState } from "react";
