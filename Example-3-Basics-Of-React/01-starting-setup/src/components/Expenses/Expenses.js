@@ -7,18 +7,19 @@ import ExpensesFilter from "./ExpensesFilter";
 // Forward it to here and
 const Expenses = (props) => {
   const [filteredYear, setFilteredYear] = useState("2023");
-  const [filteredInfoText, setFilterInfoText] = useState("2023, 2024 & 2025");
+
+  let filterInfoText = "2024, 2025 & 2026";
+
+  if (filteredYear === "2024") {
+    filterInfoText = "2023, 2025 & 2026";
+  } else if (filteredYear === "2025") {
+    filterInfoText = "2023, 2024 & 2026";
+  } else {
+    filterInfoText = "2023, 2024 & 2025";
+  }
+
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
-    if (selectedYear === "2023") {
-      setFilterInfoText("2024, 2025 & 2026");
-    } else if (selectedYear === "2024") {
-      setFilterInfoText("2023, 2025 & 2026");
-    } else if (selectedYear === "2025") {
-      setFilterInfoText("2023, 2024 & 2026");
-    } else {
-      setFilterInfoText("2023, 2024 & 2025");
-    }
   };
 
   return (
@@ -28,7 +29,7 @@ const Expenses = (props) => {
           selected={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
-        <p>Data for years {filteredInfoText} is hidden</p>
+        <p>Data for years {filterInfoText} is hidden</p>
         <ExpenseItem
           title={props.items[0].title}
           amount={props.items[0].amount}
