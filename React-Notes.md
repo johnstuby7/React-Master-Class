@@ -5,6 +5,7 @@
 - USESTATE:
   - You have seperate states even if you create a component more then once
   - const [title, setTitle] = useState(props.title); First element is the current value, the scond value is a function to update the state of the field
+  - he map() function lets you manipulate the items in an array by iterating and accessing individual items. In this guide, you will learn how to use the map() function and export it.
 
 # Terminology:
 

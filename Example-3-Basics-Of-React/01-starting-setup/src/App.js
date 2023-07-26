@@ -8,20 +8,20 @@ function App() {
       id: "e1",
       title: "Toilet Paper",
       amount: 94.12,
-      date: "January 16, 2023",
+      date: new Date(2023, 12, 22),
     },
-    { id: "e2", title: "New TV", amount: 799.49, date: "January 1 2021" },
+    { id: "e2", title: "New TV", amount: 799.49, date: new Date(2024, 11, 25) },
     {
       id: "e3",
       title: "Car Insurance",
       amount: 294.67,
-      date: "January 5 2023",
+      date: new Date(2023, 5, 26),
     },
     {
       id: "e4",
       title: "New Desk (Wooden)",
       amount: 450,
-      date: "January 6 2023",
+      date: new Date(2023, 1, 12),
     },
   ];
 
