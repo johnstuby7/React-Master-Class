@@ -1,6 +1,7 @@
 import React from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
+import ExpenseFilter from "./components/NewExpense/ExpenseFilter";
 
 function App() {
   const expenses = [
@@ -33,6 +34,7 @@ function App() {
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
+      <ExpenseFilter />
       <Expenses items={expenses} />
     </div>
   );
