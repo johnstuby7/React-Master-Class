@@ -33,6 +33,21 @@
 - Event Listener: An event listener in JavaScript is a way that you can wait for user interaction like a click or keypress and then run some code whenever that action happens.
 - Two way data binding: Two-way data binding allows bidirectional data flow, meaning that changes in the UI automatically update the component's state, and changes in the state automatically update the UI.
 - keys: A “key” is a special string attribute you need to include when creating lists of elements in React. Keys are used in React to identify which items in the list are changed, updated, or deleted.
+- tertiary conditional:
+  ```
+  {filteredExpenses.length === 0 ? (
+          <p>No Expenses Found.</p>
+        ) : (
+          filteredExpenses.map((expense) => (
+            <ExpenseItem
+              key={expense.id}
+              title={expense.title}
+              amount={expense.amount}
+              date={expense.date}
+            />
+          ))
+        )}
+  ```
 
 # Notes:
 
