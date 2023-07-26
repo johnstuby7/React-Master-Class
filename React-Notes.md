@@ -296,3 +296,64 @@ export default function App() {
     );
 }
 ```
+
+## Rendering lists of Data:
+
+Exercise: Rendering Lists of Data
+
+You're working on a "Todo List" web app and your task is to output a list of dummy todo items dynamically. For this task, a Todo component has been prepared for you, though you must still add some code to it to receive and output the todo text.
+App.js
+
+```
+    import React from 'react';
+
+    import Todo from './Todo';
+    import './styles.css';
+
+    const DUMMY_TODOS = [
+        'Learn React',
+        'Practice React',
+        'Profit!'
+    ];
+
+    // don't change the Component name "App"
+    export default function App() {
+        return (
+            <ul>
+              {DUMMY_TODOS.map(todo => <Todo text={todo} />)}
+            </ul>
+        );
+    }
+```
+
+Todo.js
+
+```
+    import React from 'react';
+
+    export default function Todo(props) {
+        return <li>{props.text}</li>;
+    }
+```
+
+styles.css
+
+```
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 3rem;
+    background-color: #2d2c2c;
+    color: #959090;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #444047;
+    color: #b2adad;
+    border: 2px solid #8567fd;
+}
+```
