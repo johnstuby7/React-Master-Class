@@ -30,6 +30,7 @@
   ```
   - this will ensure that it will always be the latest state snapshot. So you are always operating on the latest state snapshot.
 - Event Listener: An event listener in JavaScript is a way that you can wait for user interaction like a click or keypress and then run some code whenever that action happens.
+- Two way data binding: Two-way data binding allows bidirectional data flow, meaning that changes in the UI automatically update the component's state, and changes in the state automatically update the UI.
 
 # Notes:
 
