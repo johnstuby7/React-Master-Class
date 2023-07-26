@@ -271,3 +271,26 @@ const ExpenseForm = () => {
 
 export default ExpenseForm;
 ```
+
+## Example of Button increment counter:
+
+```
+import React, {useState} from 'react';
+
+import './styles.css';
+
+// don't change the Component name "App"
+export default function App() {
+    const [counter, setCounter] = React.useState(0)
+
+    function incrementCountHandler() {
+        setCounter(prevCounter => prevCounter + 1);
+    }
+    return (
+      <div>
+        <p id="counter" >{counter}</p>
+        <button onClick={incrementCountHandler}>Increment</button>
+      </div>
+    );
+}
+```
