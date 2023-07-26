@@ -13,10 +13,9 @@ const ExpenseForm = () => {
   });
 
   const titleChangeHandler = (event) => {
-    // ...userInput takes all the current values of user input for the form, and will update the title,
-    setUserInput({
-      ...userInput,
-      enteredTitle: event.target.value,
+    // This is the preferred methof to use when you are relying on the previous state
+    setUserInput((prevState) => {
+      return { ...prevState, enteredTitle: event.target.value };
     });
   };
   const amountChangeHandler = (event) => {

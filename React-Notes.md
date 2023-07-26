@@ -22,6 +22,13 @@
 - Props: Props are arguments passed into React components.
 - Composition: is a development pattern based on React's original component model where we build components from other components using explicit defined props or the implicit children prop
 - State: The state is a built-in React object that is used to contain data or information about the component.
+  - Whenever you update your state and you depend on the previous state, dont use ...userInput, instead use
+  ```
+    setUserInput((prevState) => {
+      return { ...prevState, enteredTitle: event.target.value };
+    });
+  ```
+  - this will ensure that it will always be the latest state snapshot. So you are always operating on the latest state snapshot.
 - Event Listener: An event listener in JavaScript is a way that you can wait for user interaction like a click or keypress and then run some code whenever that action happens.
 
 # Notes:
