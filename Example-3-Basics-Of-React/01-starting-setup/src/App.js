@@ -33,6 +33,7 @@ function App() {
       return [expense, ...prevExpenses];
     });
   };
+  // filter is used like map
 
   return (
     <div>

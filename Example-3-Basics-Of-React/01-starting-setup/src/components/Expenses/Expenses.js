@@ -22,6 +22,11 @@ const Expenses = (props) => {
     setFilteredYear(selectedYear);
   };
 
+  //  will return true if the year stored in the date is the same as the year stored in the filter, thus updating the list.
+  const filteredExpenses = props.items.filter((expense) => {
+    return expense.date.getFullYear().toString() === filteredYear;
+  });
+
   return (
     <div>
       <Card className="expenses">
@@ -30,7 +35,7 @@ const Expenses = (props) => {
           onChangeFilter={filterChangeHandler}
         />
 
-        {props.items.map((expense) => (
+        {filteredExpenses.map((expense) => (
           <ExpenseItem
             key={expense.id}
             title={expense.title}
