@@ -24,6 +24,12 @@ function App() {
       date: "January 6 2023",
     },
   ];
+
+  const addExpenseHandler = (expense) => {
+    console.log("In App.js");
+    console.log(expenses);
+  };
+
   return (
     <div>
       <NewExpense />
