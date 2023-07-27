@@ -6,6 +6,13 @@
   - You have seperate states even if you create a component more then once
   - const [title, setTitle] = useState(props.title); First element is the current value, the scond value is a function to update the state of the field
   - he map() function lets you manipulate the items in an array by iterating and accessing individual items. In this guide, you will learn how to use the map() function and export it.
+  - += can be used as a shortcut to add to a existing array like so:
+  ```
+  for (const expense in props.expense) {
+    const expenseMonth = expense.date.getMonth(); // starting at 0 (january is 0)
+    chartDataPoints(expenseMonth).value += expense.amount;
+  }
+  ```
 
 # Terminology:
 
