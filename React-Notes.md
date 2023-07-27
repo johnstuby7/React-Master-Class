@@ -13,6 +13,11 @@
     chartDataPoints(expenseMonth).value += expense.amount;
   }
   ```
+  - Converting dataPoint Object to be a number to be used for the chart logic:
+  ```
+  const dataPointValues = props.dataPoints.map((dataPoint) => dataPoint.value);
+  const totalMaximum = Math.max(props.Data);
+  ```
 
 # Terminology:
 
