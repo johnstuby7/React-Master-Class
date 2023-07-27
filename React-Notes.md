@@ -373,3 +373,69 @@ li {
     border: 2px solid #8567fd;
 }
 ```
+
+## Outputting conditional logic:
+
+- Clicking on the delete button will cause a card with text and a button to show up, clicking the proceed button will cause the
+- conditional to be triggered and the card to disappear.
+  App.js
+
+```
+import React, {useState} from 'react';
+
+// don't change the Component name "App"
+export default function App() {
+    const [isDeleting, setIsDeleting] = React.useState(false);
+
+    function deleteHandler() {
+     setIsDeleting(true)
+    }
+
+    function proceedHandler() {
+     setIsDeleting(false)
+    }
+
+
+    return (
+      <div>
+
+        {isDeleting && <div id="alert">
+          <h2>Are you sure?</h2>
+          <p>These changes can't be reverted!</p>
+          <button onClick={proceedHandler}>Proceed</button>
+        </div>}
+        <button onClick={deleteHandler}>Delete</button>
+      </div>
+    );
+}
+```
+
+styles.css
+
+```
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 3rem;
+    background-color: #2d2c2c;
+    color: #959090;
+    text-align: center;
+}
+
+#alert {
+    margin: 3rem auto;
+    padding: 1rem;
+    width: 15rem;
+    border: 2px solid #dd3562;
+    background-color: #776167;
+    color: white;
+}
+
+#alert button {
+    font: inherit;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    background-color: transparent;
+    color: #540218;
+}
+```
