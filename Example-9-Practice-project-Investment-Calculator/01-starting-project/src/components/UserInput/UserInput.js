@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 
+const initialUserInput = {
+  "current-savings": 10000,
+  "yearly-contribution": 1000,
+  "expected-return": 7,
+  duration: 10,
+};
+
 const UserInput = () => {
-  const [userInput, setUserInput] = useState({
-    "current-savings": 10000,
-    "yearly-contribution": 1000,
-    "expected-return": 7,
-    duration: 10,
-  });
+  const [userInput, setUserInput] = useState(initialUserInput);
 
   // button type of submit will trigger the onsubmit action and call this handler
   const submitHandler = (event) => {
@@ -15,7 +17,7 @@ const UserInput = () => {
   };
 
   const resetHandler = () => {
-    console.log("Reset");
+    setUserInput(initialUserInput);
   };
 
   // [input ] will compare the input field name(current savings, etc) and cmpare it to value
@@ -36,6 +38,7 @@ const UserInput = () => {
             onChange={(event) =>
               inputChangeHandler("current-savings", event.target.value)
             }
+            value={userInput["current-savings"]}
             type="number"
             id="current-savings"
           />
@@ -46,6 +49,7 @@ const UserInput = () => {
             onChange={(event) =>
               inputChangeHandler("yearly-contribution", event.target.value)
             }
+            value={userInput["yearly-contribution"]}
             type="number"
             id="yearly-contribution"
           />
@@ -60,6 +64,7 @@ const UserInput = () => {
             onChange={(event) =>
               inputChangeHandler("expected-return", event.target.value)
             }
+            value={userInput["expected-return"]}
             type="number"
             id="expected-return"
           />
@@ -70,6 +75,7 @@ const UserInput = () => {
             onChange={(event) =>
               inputChangeHandler("duration", event.target.value)
             }
+            value={userInput["duration"]}
             type="number"
             id="duration"
           />
