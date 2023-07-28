@@ -18,10 +18,12 @@ const UserInput = () => {
     console.log("Reset");
   };
 
+  // [input ] will compare the input field name(current savings, etc) and cmpare it to value
   const inputChangeHandler = (input, value) => {
     setUserInput((prevInput) => {
       return {
         ...prevInput,
+        [input]: value,
       };
     });
   };
