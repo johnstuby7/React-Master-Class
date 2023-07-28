@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 const UserInput = () => {
+  const [userInput, setUserInput] = useState({
+    "current-savings": 10000,
+    "yearly-contribution": 1000,
+    "expected-return": 7,
+    duration: 10,
+  });
+
   // button type of submit will trigger the onsubmit action and call this handler
   const submitHandler = (event) => {
     event.preventDefault();
