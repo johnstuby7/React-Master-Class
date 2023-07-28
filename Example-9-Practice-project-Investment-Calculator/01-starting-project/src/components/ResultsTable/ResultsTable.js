@@ -1,6 +1,6 @@
 import React from "react";
 
-function Result(props) {
+function ResultsTable(props) {
   return (
     <table className="result">
       <thead>
@@ -25,4 +25,4 @@ function Result(props) {
   );
 }
 
-export default Result;
+export default ResultsTable;

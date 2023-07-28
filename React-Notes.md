@@ -1,5 +1,16 @@
 # Good to know
 
+- What is react and why use it: React provides state-of-the-art functionality and is an excellent choice for developers looking for an easy-to-use and highly productive JavaScript framework. Using React, you can build complex UI interactions that communicate with the server in record time with JavaScript-driven pages.
+
+- Creating a react project: npx create-react-app my-app.
+
+  - Ensure that nodejs is installed
+  - you can also use npm create vite
+  - cd into project
+  - npm i
+  - npm run start
+  - ensure site loads correctly
+
 - Alternative to function keyword: const App = () => { instead of function App() {}
 - What is UseState Hook: useState is React Hook that allows you to add state to a functional component. It returns an array with two values: the current state and a function to update it.
 - USESTATE:
@@ -16,18 +27,39 @@
   }
   ```
 
-  - Converting dataPoint Object to be a number to be used for the chart logic:
+- Converting dataPoint Object to be a number to be used for the chart logic:
 
   ```
   const dataPointValues = props.dataPoints.map((dataPoint) => dataPoint.value);
   const totalMaximum = Math.max(props.Data);
   ```
 
-  - css Modules:https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/
-  - Using Breakpoints: goto dev tools in chrome/source/user/src/pick your specifc file, add a breakpoint(click on the specific line) and then go through a action on the webpage. This will cause the application to pause on that line and step through each next step on the user click, good for giving us information from each step to help us debug
-  - To help debugging, get the React DevTools extension for a browser, this gives us a extra bit of information about our react app
+- css Modules:https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/
+- Using Breakpoints: goto dev tools in chrome/source/user/src/pick your specifc file, add a breakpoint(click on the specific line) and then go through a action on the webpage. This will cause the application to pause on that line and step through each next step on the user click, good for giving us information from each step to help us debug
+- To help debugging, get the React DevTools extension for a browser, this gives us a extra bit of information about our react app
 
-  - Custom Hooks: Hooks are reusable functions. When you have component logic that needs to be used by multiple components, we can extract that logic to a custom Hook. Custom Hooks start with "use". Example: useFetch.
+- Custom Hooks: Hooks are reusable functions. When you have component logic that needs to be used by multiple components, we can extract that logic to a custom Hook. Custom Hooks start with "use". Example: useFetch.
+
+- React Hooks: are simple JavaScript functions that we can use to isolate the reusable part from a functional component. UseState(), useEffect(). start with "use".
+
+- Building code for production: npm run build creates a build directory with a production build of your app. Inside the build/static directory will be your JavaScript and CSS files. Each filename inside of build/static will contain a unique hash of the file contents.
+
+- Local State: state that belongs to a single component, example: listens to user input for a input field toggling show more details field. Should be managed component internal with useState() / use Reducer
+- Cross Component State: state that affects multiple components. EX: open/closed state of a modal overlay. requries props chains/ prop drilling
+- App wide state: State that affects the entire app(most/all components). ex: use auth status. Requires Prop chains/prop drilling
+
+  ## next
+
+  - What is nextJs: a fullstack framework for reactJs. solves common problems and makes building react apps easier. has routing. we mean Next.js handles the tooling and configuration needed for React, and provides additional structure, features, and optimizations for your application.
+    -Key Features:
+    - File based routing: define pages and routers with files and folders instead of code. less code, less work, highly understandable
+    - Server side rendering: Automatic page pre-rendering: great for SEO and initial load. Blending client and server side. Fetch data on the server and render finished pages
+    - Fullstack capabilities: easily add backend code to your next/react apps. Storing data, getting data, authentication, etc can be added to app
+
+  ## Routing:
+
+  - Route is the conditionally shown component that renders some UI when its path matches the current URL. Link: Link component is used to create links to different routes and implement navigation around the application.
+  - When building complex user interfaces, we typically build single page applications. only one initial html request and response. Page(URL) changes are then handled by client side (React) code(changes the visible content without fetching a new html page.)
 
 # Terminology:
 
@@ -44,6 +76,8 @@
 - Declarative Approach: we describe the final UI we want for each scene. We may structure the component differently
 - Props: Props are arguments passed into React components.
 - Composition: is a development pattern based on React's original component model where we build components from other components using explicit defined props or the implicit children prop
+- Custom Hooks: Hooks are reusable functions. When you have component logic that needs to be used by multiple components, we can extract that logic to a custom Hook. Custom Hooks start with "use". Example: useFetch.
+- React Hooks: are simple JavaScript functions that we can use to isolate the reusable part from a functional component.
 - State: The state is a built-in React object that is used to contain data or information about the component.
   - Whenever you update your state and you depend on the previous state, dont use ...userInput, instead use
   ```
@@ -84,6 +118,16 @@
 - npx create-react-app react-complete-guide
 - cd react-complete-guide
 - npm start
+
+# Testing:
+
+- Manual testing: Writing code <> Preview and test in browser
+- Automated Testing: tests for your code, tests individual building blocks of your app. There are three kinds of automated tests:
+  - Unit tests: Test the individual building blocks(functions, componnents) in isolation, most common kind of test
+  - Integration Tests: tests combination of multiple building blocks, a couple tests overall
+  - End-to-end Tests: tests complete scenarios in app as a user would experience them, limited but important
+- What to test: Test the different building blocks, unit tests: the smallest building blocks that make up your app. Ensure to test both
+  success and failure cases.
 
 # Examples:
 
