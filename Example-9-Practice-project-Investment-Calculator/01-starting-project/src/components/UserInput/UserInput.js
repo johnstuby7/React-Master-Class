@@ -7,13 +7,14 @@ const initialUserInput = {
   duration: 10,
 };
 
-const UserInput = () => {
+const UserInput = (props) => {
   const [userInput, setUserInput] = useState(initialUserInput);
 
   // button type of submit will trigger the onsubmit action and call this handler
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log("Submit");
+
+    props.onCalculate(userInput);
   };
 
   const resetHandler = () => {
