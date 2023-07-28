@@ -48,18 +48,27 @@
 - Cross Component State: state that affects multiple components. EX: open/closed state of a modal overlay. requries props chains/ prop drilling
 - App wide state: State that affects the entire app(most/all components). ex: use auth status. Requires Prop chains/prop drilling
 
-  ## next
+-ONCHANGE: If you are creating a handler that is watching user data you will need to do the following:
+userInput.js
 
-  - What is nextJs: a fullstack framework for reactJs. solves common problems and makes building react apps easier. has routing. we mean Next.js handles the tooling and configuration needed for React, and provides additional structure, features, and optimizations for your application.
-    -Key Features:
-    - File based routing: define pages and routers with files and folders instead of code. less code, less work, highly understandable
-    - Server side rendering: Automatic page pre-rendering: great for SEO and initial load. Blending client and server side. Fetch data on the server and render finished pages
-    - Fullstack capabilities: easily add backend code to your next/react apps. Storing data, getting data, authentication, etc can be added to app
+```
+const inputChangeHandler = (input, value) => {};
+<input
+            onChange={() => inputChangeHandler()} >
+```
 
-  ## Routing:
+## next
 
-  - Route is the conditionally shown component that renders some UI when its path matches the current URL. Link: Link component is used to create links to different routes and implement navigation around the application.
-  - When building complex user interfaces, we typically build single page applications. only one initial html request and response. Page(URL) changes are then handled by client side (React) code(changes the visible content without fetching a new html page.)
+- What is nextJs: a fullstack framework for reactJs. solves common problems and makes building react apps easier. has routing. we mean Next.js handles the tooling and configuration needed for React, and provides additional structure, features, and optimizations for your application.
+  -Key Features:
+  - File based routing: define pages and routers with files and folders instead of code. less code, less work, highly understandable
+  - Server side rendering: Automatic page pre-rendering: great for SEO and initial load. Blending client and server side. Fetch data on the server and render finished pages
+  - Fullstack capabilities: easily add backend code to your next/react apps. Storing data, getting data, authentication, etc can be added to app
+
+## Routing:
+
+- Route is the conditionally shown component that renders some UI when its path matches the current URL. Link: Link component is used to create links to different routes and implement navigation around the application.
+- When building complex user interfaces, we typically build single page applications. only one initial html request and response. Page(URL) changes are then handled by client side (React) code(changes the visible content without fetching a new html page.)
 
 # Terminology:
 
