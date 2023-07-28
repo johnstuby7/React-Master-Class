@@ -1,8 +1,17 @@
 import React from "react";
 
-function UserInput(props) {
+const UserInput = () => {
+  // button type of submit will trigger the onsubmit action and call this handler
+  const submitHandler = (event) => {
+    event.preventDefault();
+    console.log("Submit");
+  };
+
+  const resetHandler = () => {
+    console.log("Reset");
+  };
   return (
-    <form className="form">
+    <form onSubmit={submitHandler} className="form">
       <div className="input-group">
         <p>
           <label htmlFor="current-savings">Current Savings ($)</label>
@@ -26,7 +35,7 @@ function UserInput(props) {
         </p>
       </div>
       <p className="actions">
-        <button type="reset" className="buttonAlt">
+        <button onClick={resetHandler} type="reset" className="buttonAlt">
           Reset
         </button>
         <button type="submit" className="button">
@@ -35,6 +44,6 @@ function UserInput(props) {
       </p>
     </form>
   );
-}
+};
 
 export default UserInput;
