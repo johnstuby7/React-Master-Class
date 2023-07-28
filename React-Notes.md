@@ -27,6 +27,8 @@
   - Using Breakpoints: goto dev tools in chrome/source/user/src/pick your specifc file, add a breakpoint(click on the specific line) and then go through a action on the webpage. This will cause the application to pause on that line and step through each next step on the user click, good for giving us information from each step to help us debug
   - To help debugging, get the React DevTools extension for a browser, this gives us a extra bit of information about our react app
 
+  - Custom Hooks: Hooks are reusable functions. When you have component logic that needs to be used by multiple components, we can extract that logic to a custom Hook. Custom Hooks start with "use". Example: useFetch.
+
 # Terminology:
 
 - Constants: Work like variables, but must not be reassigned
