@@ -19,7 +19,11 @@ const UserInput = () => {
   };
 
   const inputChangeHandler = (input, value) => {
-    console.log(input, value);
+    setUserInput((prevInput) => {
+      return {
+        ...prevInput,
+      };
+    });
   };
   return (
     <form onSubmit={submitHandler} className="form">
