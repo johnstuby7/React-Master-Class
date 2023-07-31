@@ -48,10 +48,21 @@ const AddUser = (props) => {
     setEnteredAge(event.target.value);
   };
 
+  const errorHandler = () => {
+    setError(null);
+  };
+
   return (
     // wrap elements in div to allow json elements(errorModel)
+    // OnCOnfirm is what will cause the error message to disappear
     <div>
-      {error && <ErrorModel title={error.title} message={error.message} />}
+      {error && (
+        <ErrorModel
+          title={error.title}
+          message={error.message}
+          onConfirm={errorHandler}
+        />
+      )}
       <Card className={classes.input}>
         <form onSubmit={addUserHandler}>
           <label htmlFor="username">Username</label>
