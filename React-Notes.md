@@ -120,6 +120,7 @@ return (
 - Two way data binding: Two-way data binding allows bidirectional data flow, meaning that changes in the UI automatically update the component's state, and changes in the state automatically update the UI.
 - keys: A “key” is a special string attribute you need to include when creating lists of elements in React. Keys are used in React to identify which items in the list are changed, updated, or deleted.
 - tertiary conditional:
+
   ```
   {filteredExpenses.length === 0 ? (
           <p>No Expenses Found.</p>
@@ -134,6 +135,9 @@ return (
           ))
         )}
   ```
+
+- useReducer(): the useReducer Hook accepts two arguments.The useReducer Hook returns the current stateand a dispatchmethod.
+  useReducer(<reducer>, <initialState>)
 
 # Notes:
 
