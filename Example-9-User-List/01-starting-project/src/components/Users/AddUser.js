@@ -11,13 +11,22 @@ const AddUser = (props) => {
   // setEnteredUsername contains a function that changes the state of the enteredUsername, causing a rerender cycle
   const [enteredUsername, setEnteredUsername] = useState("");
   const [enteredAge, setEnteredAge] = useState("");
+  const [error, setError] = useState();
 
   const addUserHandler = (event) => {
     event.preventDefault();
     if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0) {
+      setError({
+        title: "Invalid Input",
+        message: "Please enter a valid name and age (non-empty values",
+      });
       return;
     }
     if (+enteredAge < 1) {
+      setError({
+        title: "Invalid Age",
+        message: "Please enter a valid Age (>0)",
+      });
       return;
     }
 
@@ -42,7 +51,7 @@ const AddUser = (props) => {
   return (
     // wrap elements in div to allow json elements(errorModel)
     <div>
-      <ErrorModel title="An Error Occured" message="Something went wrong!" />
+      {error && <ErrorModel title={error.title} message={error.message} />}
       <Card className={classes.input}>
         <form onSubmit={addUserHandler}>
           <label htmlFor="username">Username</label>
