@@ -14,6 +14,11 @@ const AddUser = (props) => {
   const addUserHandler = (event) => {
     event.preventDefault();
     console.log(enteredUsername, enteredAge);
+    // This will reset both input fields to blanks after submission
+    // For the inputs down below, you need to update them so that they have a value={enteredAge}, with that change our current state
+    // for the inputs will be captured correctly
+    setEnteredUsername("");
+    setEnteredAge("");
   };
 
   const usernameChangeHandler = (event) => {
@@ -29,9 +34,19 @@ const AddUser = (props) => {
     <Card className={classes.input}>
       <form onSubmit={addUserHandler}>
         <label htmlFor="username">Username</label>
-        <input id="username" type="text" onChange={usernameChangeHandler} />
+        <input
+          id="username"
+          type="text"
+          value={enteredUsername}
+          onChange={usernameChangeHandler}
+        />
         <label htmlFor="age">Age (Years)</label>
-        <input id="age" type="text" onChange={ageChangeHandler} />
+        <input
+          id="age"
+          type="text"
+          value={enteredAge}
+          onChange={ageChangeHandler}
+        />
         <Button type="submit">Add User </Button>
       </form>
     </Card>
