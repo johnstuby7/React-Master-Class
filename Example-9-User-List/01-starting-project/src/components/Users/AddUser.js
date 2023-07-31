@@ -20,7 +20,8 @@ const AddUser = (props) => {
       return;
     }
 
-    console.log(enteredUsername, enteredAge);
+    // forwarding the updated values to the app on each button click
+    props.onAddUser(enteredUsername, enteredAge);
     // This will reset both input fields to blanks after submission
     // For the inputs down below, you need to update them so that they have a value={enteredAge}, with that change our current state
     // for the inputs will be captured correctly
