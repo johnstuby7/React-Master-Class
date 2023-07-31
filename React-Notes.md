@@ -72,6 +72,12 @@ return (
 )
 ```
 
+- React Portals: Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.
+  ```
+  ReactDOM.createPortal(child, container)
+  ```
+  - The first argument (child) is any renderable React child, such as an element, string, or fragment. The second argument (container) is a DOM element.
+
 ## next
 
 - What is nextJs: a fullstack framework for reactJs. solves common problems and makes building react apps easier. has routing. we mean Next.js handles the tooling and configuration needed for React, and provides additional structure, features, and optimizations for your application.
