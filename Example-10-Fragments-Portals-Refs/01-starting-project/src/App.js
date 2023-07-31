@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import AddUser from './components/Users/AddUser';
-import UsersList from './components/Users/UsersList';
+import AddUser from "./components/Users/AddUser";
+import UsersList from "./components/Users/UsersList";
 
 function App() {
   const [usersList, setUsersList] = useState([]);
@@ -15,11 +15,12 @@ function App() {
     });
   };
 
+  // <> is a fragment.  Fragments let you group a list of children without adding extra nodes to the DOM.
   return (
-    <div>
+    <>
       <AddUser onAddUser={addUserHandler} />
       <UsersList users={usersList} />
-    </div>
+    </>
   );
 }
 
