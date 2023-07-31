@@ -13,6 +13,13 @@ const AddUser = (props) => {
 
   const addUserHandler = (event) => {
     event.preventDefault();
+    if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0) {
+      return;
+    }
+    if (+enteredAge < 1) {
+      return;
+    }
+
     console.log(enteredUsername, enteredAge);
     // This will reset both input fields to blanks after submission
     // For the inputs down below, you need to update them so that they have a value={enteredAge}, with that change our current state

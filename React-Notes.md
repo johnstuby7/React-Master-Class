@@ -57,6 +57,8 @@ const inputChangeHandler = (input, value) => {};
             onChange={() => inputChangeHandler()} >
 ```
 
+- To ensure that input that is a string but should be used as number, do the following: +enteredAge
+
 ## next
 
 - What is nextJs: a fullstack framework for reactJs. solves common problems and makes building react apps easier. has routing. we mean Next.js handles the tooling and configuration needed for React, and provides additional structure, features, and optimizations for your application.
