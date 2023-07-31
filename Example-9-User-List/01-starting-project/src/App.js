@@ -8,7 +8,10 @@ function App() {
   const addUserHandler = (uName, uAge) => {
     setUsersList((prevUsersList) => {
       // get previous entry and update with uname/uage entered values
-      return [...prevUsersList, { name: uName, age: uAge }];
+      return [
+        ...prevUsersList,
+        { name: uName, age: uAge, id: Math.random.toString() },
+      ];
     });
   };
   return (
