@@ -59,6 +59,19 @@ const inputChangeHandler = (input, value) => {};
 
 - To ensure that input that is a string but should be used as number, do the following: +enteredAge
 
+- jsx limiations: you can only return one root element, the solution to this is to wrap what you want to return in a div:
+
+```
+return (
+  <div>
+    <h2>
+      Hi THere!
+    </h2>
+    <p>This does work</p>
+  </div>
+)
+```
+
 ## next
 
 - What is nextJs: a fullstack framework for reactJs. solves common problems and makes building react apps easier. has routing. we mean Next.js handles the tooling and configuration needed for React, and provides additional structure, features, and optimizations for your application.
