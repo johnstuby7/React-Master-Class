@@ -141,6 +141,14 @@ return (
   useReducer(<reducer>, <initialState>)
   -useState() : should be used for the mian state management tool, great for independent pieces of state/data, better if state updates are easy and limited to a few kinds of updates
 
+  - Reduce method: allows us to transform a array into a single value, in this case a number
+
+  ```
+  const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
+    return curNumber + item.amount;
+  }, 0);
+  ```
+
 # Notes:
 
 - For components it should be CamelCase

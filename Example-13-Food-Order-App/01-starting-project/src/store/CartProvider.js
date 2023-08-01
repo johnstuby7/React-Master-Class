@@ -1,4 +1,14 @@
+import { useReducer } from "react";
 import CartContext from "./cart-context";
+
+const defaultCartState = {
+  items: [],
+  totalAmount: 0,
+};
+
+const cartReducer = (state, action) => {
+  return defaultCartState;
+};
 
 const CartProvider = (props) => {
   const addItemToCartHandler = (item) => {};
