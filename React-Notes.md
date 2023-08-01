@@ -136,8 +136,10 @@ return (
         )}
   ```
 
-- useReducer(): the useReducer Hook accepts two arguments.The useReducer Hook returns the current stateand a dispatchmethod.
+- useReducer(): the useReducer Hook accepts two arguments.The useReducer Hook returns the current stateand a dispatchmethod. should be
+- used when useState becomes cumbersome.should be used if you have related pieces of state/data, for more complex state updates.
   useReducer(<reducer>, <initialState>)
+  -useState() : should be used for the mian state management tool, great for independent pieces of state/data, better if state updates are easy and limited to a few kinds of updates
 
 # Notes:
 
