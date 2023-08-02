@@ -8,10 +8,6 @@ function App() {
   const [isLoading, setisLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    fetchMoviesHandler();
-  }, [fetchMoviesHandler]);
-
   const fetchMoviesHandler = useCallback(async () => {
     setisLoading(true);
     setError(null);
@@ -37,6 +33,10 @@ function App() {
     }
     setisLoading(false);
   }, []);
+
+  useEffect(() => {
+    fetchMoviesHandler();
+  }, [fetchMoviesHandler]);
 
   let content = <p>Found no movies.</p>;
 
