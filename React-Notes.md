@@ -161,6 +161,8 @@ return (
 
 - For components it should be CamelCase
 - custom made elements will be uppercase like <ExpenseItem></ExpenseItem> normal tags will be lowercase <p></p>
+- axios is considered a good choice for http requests.
+- Fetch API is built into browsers and allows us to fetch/send http requests
 
 ## Creating react projects: browser based vs local Development
 
