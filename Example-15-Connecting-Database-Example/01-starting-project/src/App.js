@@ -42,7 +42,10 @@ function App() {
   }, [fetchMoviesHandler]);
 
   function addMovieHandler(movie) {
-    console.log(movie);
+    fetch("https://react-http-25cf6-default-rtdb.firebaseio.com/movies.json", {
+      method: "POST",
+      body: JSON.stringify(movie),
+    });
   }
 
   let content = <p>Found no movies.</p>;
