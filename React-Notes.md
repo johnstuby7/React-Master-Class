@@ -155,6 +155,8 @@ return (
   export default React.memo(DemoOutput);
   ```
 
+  - useCallback() allows you to save a function so you can reuse it
+
 # Notes:
 
 - For components it should be CamelCase
