@@ -11,6 +11,12 @@ const SimpleInput = (props) => {
   const formSubmissionHandler = (event) => {
     event.preventDefault();
 
+    // Trim will remove any excess whitespace
+    // the return will return from the overall function and cancel it, so the rest of the function wont be run
+    if (enteredName.trim() === "") {
+      return;
+    }
+
     console.log(enteredName);
     const enteredValue = nameInputRef.current.value;
     console.log(enteredValue);
