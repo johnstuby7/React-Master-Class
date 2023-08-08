@@ -5,10 +5,13 @@ import MealItem from "./MealItem/MealItem";
 import classes from "./AvailableMeals.module.css";
 
 const AvailableMeals = () => {
-  useEffect(async () => {
-    await fetch(
-      "https://react-http-25cf6-default-rtdb.firebaseio.com/meals.json"
-    ).then();
+  useEffect(() => {
+    const fetchMeals = async () => {
+      await fetch(
+        "https://react-http-25cf6-default-rtdb.firebaseio.com/meals.json"
+      ).then();
+    };
+    fetchMeals();
   }, []);
 
   const mealsList = DUMMY_MEALS.map((meal) => (
