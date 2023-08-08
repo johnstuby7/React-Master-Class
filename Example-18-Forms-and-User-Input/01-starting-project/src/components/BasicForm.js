@@ -29,6 +29,12 @@ const BasicForm = (props) => {
     reset: resetEmail,
   } = useInput();
 
+  let formIsValid = false;
+
+  if (firstNameIsValid && lastNameIsValid && emailIsValid) {
+    formIsValid = true;
+  }
+
   const firstNameClasses = firstNameHasError
     ? "form-control invalid"
     : "form-control";
@@ -75,7 +81,7 @@ const BasicForm = (props) => {
         {emailHasError && <p>Please enter a first name</p>}
       </div>
       <div className="form-actions">
-        <button>Submit</button>
+        <button disabled={!formIsValid}>Submit</button>
       </div>
     </form>
   );
