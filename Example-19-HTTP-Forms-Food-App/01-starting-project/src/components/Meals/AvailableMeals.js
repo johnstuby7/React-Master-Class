@@ -15,6 +15,9 @@ const AvailableMeals = () => {
       const loadedMeals = [];
 
       for (const key in responseData) {
+        loadedMeals.push({
+          id: key,
+        });
       }
     };
     fetchMeals();
