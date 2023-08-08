@@ -7,9 +7,15 @@ import classes from "./AvailableMeals.module.css";
 const AvailableMeals = () => {
   useEffect(() => {
     const fetchMeals = async () => {
-      await fetch(
+      const response = await fetch(
         "https://react-http-25cf6-default-rtdb.firebaseio.com/meals.json"
-      ).then();
+      );
+      const responseData = await response.json();
+
+      const loadedMeals = [];
+
+      for (const key in responseData) {
+      }
     };
     fetchMeals();
   }, []);
