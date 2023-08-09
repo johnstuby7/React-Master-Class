@@ -19,7 +19,20 @@ const Checkout = (props) => {
     const enteredPostal = nameInputRef.current.value;
     const enteredCity = nameInputRef.current.value;
 
-    const enteredNameisValid = !isEmpty(enteredName);
+    const enteredNameIsValid = !isEmpty(enteredName);
+    const enteredStreetIsValid = !isEmpty(enteredStreet);
+    const enteredCityIsValid = !isEmpty(enteredCity);
+    const enteredPostalIsValid = isNotFiveChars(enteredPostal);
+
+    const formIsValid =
+      enteredNameIsValid &&
+      enteredStreetIsValid &&
+      enteredCityIsValid &&
+      enteredPostalIsValid;
+
+    if (formIsValid) {
+      // submit the cart data
+    }
   };
 
   return (
