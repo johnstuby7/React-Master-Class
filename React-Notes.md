@@ -724,3 +724,9 @@ export default UserInput;
 ### Redux concepts:
 
 - Reducer function should not mutate anything, but just create a new state object
+
+#### new project:
+
+- Create your react project
+- cd into it and npm install dependencies
+- install redux and react-redux: npm install redux react-redux

@@ -1,4 +1,4 @@
-const redux = require("redux");
+import { configureStore } from "@reduxjs/toolkit";
 
 const counterReducer = (state, action) => {
   return {
@@ -6,8 +6,16 @@ const counterReducer = (state, action) => {
   };
 };
 
-const store = redux.createStore(counterReducer);
+const store = configureStore({
+  reducer: {
+    counterReducer,
+  },
+});
 
 const counterSubscriber = () => {
-  store.getState();
+  const latestState = store.getState();
+
+  console.log(latestState);
 };
+
+store.subscribe(counterSubscriber);
