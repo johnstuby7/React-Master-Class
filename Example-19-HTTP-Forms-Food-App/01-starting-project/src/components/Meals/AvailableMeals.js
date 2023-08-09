@@ -36,7 +36,12 @@ const AvailableMeals = () => {
       setIsLoading(false);
     };
 
-    fetchMeals();
+    try {
+      fetchMeals();
+    } catch (error) {
+      setIsLoading(false);
+      setHttpError();
+    }
   }, []);
 
   const mealsList = meals.map((meal) => (
