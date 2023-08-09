@@ -719,7 +719,7 @@ export default UserInput;
 
 ```
 
-## Redux Examples:
+## Redux Examples: Course was very out of date for redux, when doing examples ensure they are up to date
 
 ### Redux concepts:
 
@@ -730,3 +730,9 @@ export default UserInput;
 - Create your react project
 - cd into it and npm install dependencies
 - install redux and react-redux: npm install redux react-redux
+
+## React Router:
+
+### Good to know:
+
+### Examples:
