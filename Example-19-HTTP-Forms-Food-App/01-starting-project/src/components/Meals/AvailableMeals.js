@@ -7,12 +7,18 @@ import classes from "./AvailableMeals.module.css";
 const AvailableMeals = () => {
   const [meals, setMeals] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [httpError, setHttpError] = useState();
 
   useEffect(() => {
     const fetchMeals = async () => {
       const response = await fetch(
-        "https://react-http-25cf6-default-rtdb.firebaseio.com/meals.json"
+        "https://react-http-25cf6-default-rtdb.firebaseio.com/meals"
       );
+
+      if (!response.ok) {
+        throw new Error("Something Went Wrong!");
+      }
+
       const responseData = await response.json();
 
       const loadedMeals = [];
