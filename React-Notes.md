@@ -157,6 +157,8 @@ return (
 
   - useCallback() allows you to save a function so you can reuse it
 
+  - Redux: A state management system for cross-componet or app-wide state
+
 # Notes:
 
 - For components it should be CamelCase
@@ -716,3 +718,9 @@ const UserInput = () => {
 export default UserInput;
 
 ```
+
+## Redux Examples:
+
+### Redux concepts:
+
+- Reducer function should not mutate anything, but just create a new state object
