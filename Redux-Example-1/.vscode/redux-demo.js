@@ -7,3 +7,7 @@ const counterReducer = (state, action) => {
 };
 
 const store = redux.createStore(counterReducer);
+
+const counterSubscriber = () => {
+  store.getState();
+};
