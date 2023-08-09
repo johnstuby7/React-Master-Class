@@ -12,7 +12,7 @@ const AvailableMeals = () => {
   useEffect(() => {
     const fetchMeals = async () => {
       const response = await fetch(
-        "https://react-http-25cf6-default-rtdb.firebaseio.com/meals"
+        "https://react-http-25cf6-default-rtdb.firebaseio.com/meals.json"
       );
 
       if (!response.ok) {
@@ -36,12 +36,10 @@ const AvailableMeals = () => {
       setIsLoading(false);
     };
 
-    try {
-      fetchMeals();
-    } catch (error) {
+    fetchMeals().catch((error) => {
       setIsLoading(false);
-      setHttpError();
-    }
+      setHttpError(error.message);
+    });
   }, []);
 
   const mealsList = meals.map((meal) => (
@@ -60,7 +58,14 @@ const AvailableMeals = () => {
         <p>...Loading</p>
       </section>
     );
-  } else {
+  }
+
+  if (httpError) {
+    return (
+      <section className={classes.MealsError}>
+        <p>{httpError}</p>
+      </section>
+    );
   }
 
   return (
