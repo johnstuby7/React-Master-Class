@@ -1,11 +1,16 @@
+import React from "react";
 import { Outlet } from "react-router-dom";
+import classes from "./Root.module.css";
+
+import MainNavigation from "../components/MainNavigation";
 
 function RootLayout() {
   return (
     <>
-      <h1>Root Layout</h1>; // Outlet is the marker where the child routes will
-      be rendered to
-      <Outlet />
+      <MainNavigation />
+      <main className={classes.content}>
+        <Outlet />
+      </main>
     </>
   );
 }
