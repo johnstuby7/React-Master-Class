@@ -1,4 +1,6 @@
-import classes from './EventsList.module.css';
+import classes from "./EventsList.module.css";
+
+import React from "react";
 
 function EventsList({ events }) {
   return (

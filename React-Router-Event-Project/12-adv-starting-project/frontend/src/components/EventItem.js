@@ -1,4 +1,6 @@
-import classes from './EventItem.module.css';
+import classes from "./EventItem.module.css";
+
+import React from "react";
 
 function EventItem({ event }) {
   function startDeleteHandler() {
