@@ -740,10 +740,14 @@ export default UserInput;
 
 ### Examples:
 
-- How to make a back button that will go back to the products list from a products detail page:
+#### Back button with link
+
+- How to make a back button that will go back to the products list from a products detail page: products/product-id
 
 ```
-<Link to=".." relative="route">
+<Link to=".." relative="path">
           Back
         </Link>
 ```
+
+#### index routes example:
