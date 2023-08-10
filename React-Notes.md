@@ -739,3 +739,11 @@ export default UserInput;
 - Relative Routes: Routes that are defined as "products". this route will be added after the currently used route
 
 ### Examples:
+
+- How to make a back button that will go back to the products list from a products detail page:
+
+```
+<Link to=".." relative="route">
+          Back
+        </Link>
+```

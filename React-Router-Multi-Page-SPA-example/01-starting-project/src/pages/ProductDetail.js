@@ -9,7 +9,7 @@ function ProductDetailPage() {
       <h1>Product Details</h1>
       <p>{params.productId}</p>
       <p>
-        <Link to=".." relative="route">
+        <Link to=".." relative="path">
           Back
         </Link>
       </p>
