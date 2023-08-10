@@ -735,4 +735,7 @@ export default UserInput;
 
 ### Good to know:
 
+- Absolute route: Routes that are defined with a / are considered absolute paths
+- Relative Routes: Routes that are defined as "products". this route will be added after the currently used route
+
 ### Examples:
