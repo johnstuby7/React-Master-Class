@@ -751,3 +751,12 @@ export default UserInput;
 ```
 
 #### index routes example:
+
+- index route: allows you to set the default route if the parent route is active
+
+```
+ {
+        index: true,
+        element: <HomePage />,
+      },
+```
