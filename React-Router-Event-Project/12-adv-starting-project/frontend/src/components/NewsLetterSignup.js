@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useFetcher } from "react-router-dom";
 
 import classes from "./NewsletterSignup.module.css";
 
 function NewsletterSignup() {
   const fetcher = useFetcher();
+  const { data, state } = fetcher;
+
+  useEffect(() => {
+    if (state === "idle" && data && data.message) {
+      window.alert(data.message);
+    }
+  }, [data, state]);
 
   // fetcher.Form will not navigate to the page that the loader or action belongs to
   // doesnt transition to a new page
