@@ -3,6 +3,8 @@ import {
   Form,
   useNavigation,
   useActionData,
+  json,
+  redirect,
 } from "react-router-dom";
 import React from "react";
 
@@ -21,7 +23,7 @@ function EventForm({ method, event }) {
 
   // Line 25-31 is how to output the errors from the backend in a list to the frontend over the add event form
   return (
-    <Form method="post" className={classes.form}>
+    <Form method={method} className={classes.form}>
       {data && data.errors && (
         <ul>
           {Object.values(data.errors).map((err) => (
@@ -82,3 +84,33 @@ function EventForm({ method, event }) {
 }
 
 export default EventForm;
+
+export async function action({ request, params }) {
+  const data = await request.formData();
+
+  const eventData = {
+    title: data.get("title"),
+    image: data.get("image"),
+    date: data.get("date"),
+    description: data.get("description"),
+  };
+
+  const response = await fetch("http://localhost:8080/events", {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify(eventData),
+  });
+
+  // in case of validation errors from backend
+  if (response.status === 422) {
+    return response;
+  }
+
+  if (!response.ok) {
+    throw json({ message: "Could not save event" }, { Status: 500 });
+  }
+
+  return redirect("/events");
+}
