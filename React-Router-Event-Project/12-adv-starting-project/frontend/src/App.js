@@ -3,7 +3,7 @@ import React from "react";
 
 import HomePage from "./pages/Home";
 import EventsPage, { loader as eventsLoader } from "./pages/Events";
-import NewEventPage from "./pages/NewEvent";
+import NewEventPage, { action as newEventAction } from "./pages/NewEvent";
 import EventDetailsPage, {
   loader as eventDetailLoader,
 } from "./pages/EventDetails";
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
             ],
           },
 
-          { path: "new", element: <NewEventPage />, action: () => {} },
+          { path: "new", element: <NewEventPage />, action: newEventAction },
         ],
       },
     ],
