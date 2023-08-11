@@ -27,7 +27,8 @@ async function loadEvents() {
     // });
     return json({ message: "could not fetch events" }, { status: 500 });
   } else {
-    return response;
+    const resData = await response.json();
+    return resData.events;
   }
 }
 
