@@ -29,7 +29,8 @@ const router = createBrowserRouter([
             loader: eventsLoader,
           },
           {
-            path: "eventId",
+            path: ":eventId",
+            id: "event-detail",
             loader: eventDetailLoader,
             children: [
               {
