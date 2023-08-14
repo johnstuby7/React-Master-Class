@@ -1,3 +1,4 @@
+import { json } from "react-router-dom";
 import AuthForm from "../components/AuthForm";
 
 function AuthenticationPage() {
@@ -11,6 +12,10 @@ export async function action({ request }) {
   // assign the url search params and then are able to access the mode from it
   const searchParams = new URL(request.url).searchParams;
   const mode = searchParams.get("mode") || "login";
+
+  if (mode !== "login" && mode !== "signup") {
+    throw json({ message: "Unsupported Mode." }, { status: 422 });
+  }
 
   const data = await request.formData();
 
