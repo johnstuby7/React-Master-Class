@@ -107,23 +107,29 @@ return (
   - once the project is made, navigate to the hosting option under build and click get started
   -
 
-- ## Lazy Loading: load code only when its needed:
+## Lazy Loading: load code only when its needed:
 
-  ```
-  import { lazy, Suspense } from "react";
-  const PostPage = lazy(() => import("./pages/Post"));
+```
+import { lazy, Suspense } from "react";
+const PostPage = lazy(() => import("./pages/Post"));
 
-   {
-        path: ":id",
-        element: (
-          <Suspense fallback={<p>Loading...</p>}>
-            <PostPage />
-          </Suspense>
-        ),
-        loader: (meta) =>
-          import("./pages/Post").then((module) => module.loader(meta)),
-      },
-  ```
+ {
+      path: ":id",
+      element: (
+        <Suspense fallback={<p>Loading...</p>}>
+          <PostPage />
+        </Suspense>
+      ),
+      loader: (meta) =>
+        import("./pages/Post").then((module) => module.loader(meta)),
+    },
+```
+
+## Next
+
+Install:
+
+- https://nextjs.org/docs/getting-started/installation
 
 # Terminology:
 
