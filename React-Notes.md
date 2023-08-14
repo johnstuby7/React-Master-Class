@@ -91,6 +91,19 @@ return (
 - Route is the conditionally shown component that renders some UI when its path matches the current URL. Link: Link component is used to create links to different routes and implement navigation around the application.
 - When building complex user interfaces, we typically build single page applications. only one initial html request and response. Page(URL) changes are then handled by client side (React) code(changes the visible content without fetching a new html page.)
 
+## Deploying:
+
+- Steps for deployment:
+
+  - test code
+  - optimize code
+  - run build script for application
+  - upload production code to server
+  - configure server
+
+- Lazy Loading: load code only when its needed:
+  -
+
 # Terminology:
 
 - Constants: Work like variables, but must not be reassigned
