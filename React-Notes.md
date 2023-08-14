@@ -100,9 +100,25 @@ return (
   - run build script for application
   - upload production code to server
   - configure server
+  - look into firebase for example of where to deploy a website
 
-- Lazy Loading: load code only when its needed:
-  -
+- ## Lazy Loading: load code only when its needed:
+
+  ```
+  import { lazy, Suspense } from "react";
+  const PostPage = lazy(() => import("./pages/Post"));
+
+   {
+        path: ":id",
+        element: (
+          <Suspense fallback={<p>Loading...</p>}>
+            <PostPage />
+          </Suspense>
+        ),
+        loader: (meta) =>
+          import("./pages/Post").then((module) => module.loader(meta)),
+      },
+  ```
 
 # Terminology:
 
