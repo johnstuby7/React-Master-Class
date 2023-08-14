@@ -131,6 +131,10 @@ Install:
 
 - https://nextjs.org/docs/getting-started/installation
 
+### Create dynamic page:
+
+- Create a file, to make it dynamic, save the file as [something]. it needs to be in [] to tell nuxt it is dynamic
+
 # Terminology:
 
 - Constants: Work like variables, but must not be reassigned
