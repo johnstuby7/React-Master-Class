@@ -102,6 +102,11 @@ return (
   - configure server
   - look into firebase for example of where to deploy a website
 
+  - firebase:
+  - Create a new account/ new project
+  - once the project is made, navigate to the hosting option under build and click get started
+  -
+
 - ## Lazy Loading: load code only when its needed:
 
   ```
