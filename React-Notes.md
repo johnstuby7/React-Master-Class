@@ -135,6 +135,16 @@ Install:
 
 - Create a file, to make it dynamic, save the file as [something]. it needs to be in [] to tell nuxt it is dynamic
 
+## Testing:
+
+- The three As of testing:
+
+  - Arrange: setup the test data,t est condtions and test environment
+  - Act: Run logic that should be tested(eg execute function)
+  - Assert: compare execution results with expected results
+
+- to be able to render a component for a test, we need touse the render provider by testing-library/react render(<greeting />)
+
 # Terminology:
 
 - Constants: Work like variables, but must not be reassigned
