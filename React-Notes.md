@@ -148,6 +148,12 @@ Install:
 
 ## typescript:
 
+- Install typescript:
+
+  - npm install typescript
+  - run the compiler: npx
+  - create a configuration file for the compiler
+
 - typescript is a superset to javascript. adds static typing to javascript
 
 # Terminology:
