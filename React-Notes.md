@@ -144,6 +144,7 @@ Install:
   - Assert: compare execution results with expected results
 
 - to be able to render a component for a test, we need touse the render provider by testing-library/react render(<greeting />)
+- mocks: dummy data to be used for testing, ensures that real data is not being used/submitted in a testing setting
 
 # Terminology:
 
