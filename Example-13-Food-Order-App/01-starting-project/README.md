@@ -1,3 +1,9 @@
-# Use Reducer examples
+# Food Order App examples
 
-This example covers how to use reducers and a couple different situations in which they are a good solution
+This example Is a more realistic example of a react project, it allows you to order multiple food items and have the total update in the cart. also includes crud actions for the menu.
+
+## Install
+
+- Git pull the repo
+- npm i
+- npm start

@@ -1,3 +1,9 @@
-# Use Reducer examples
+# Custom Hooks Examples
 
-This example covers how to use reducers and a couple different situations in which they are a good solution
+This example covers a more realistic example of how to use custom hooks
+
+## Install:
+
+- clone the repo
+- npm i
+- npm start

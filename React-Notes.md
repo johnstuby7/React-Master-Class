@@ -253,6 +253,10 @@ Install:
 
 # Examples:
 
+```
+
+```
+
 ## Arrow function:
 
 ```

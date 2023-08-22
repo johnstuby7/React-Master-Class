@@ -1,3 +1,9 @@
-# Use Reducer examples
+# Optimization examples
 
-This example covers how to use reducers and a couple different situations in which they are a good solution
+This example covers Best practices for refactoring and optimizing code
+
+## Install:
+
+- clone the repo
+- npm i
+- npm start

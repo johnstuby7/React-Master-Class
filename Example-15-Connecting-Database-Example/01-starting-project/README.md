@@ -1,3 +1,9 @@
-# Use Reducer examples
+# Database Connections Examples
 
-This example covers how to use reducers and a couple different situations in which they are a good solution
+This example covers how to connect a react project to a database
+
+## Install:
+
+- clone the repo
+- npm i
+- npm start

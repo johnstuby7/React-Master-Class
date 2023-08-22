@@ -1,3 +1,9 @@
-# Use Reducer examples
+# HTTP forms food app Examples
 
-This example covers how to use reducers and a couple different situations in which they are a good solution
+This example covers the basics https and continues the food app project
+
+## Install:
+
+- clone the repo
+- npm i
+- npm start

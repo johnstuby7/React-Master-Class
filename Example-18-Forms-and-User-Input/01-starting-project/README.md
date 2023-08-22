@@ -1,3 +1,9 @@
-# Use Reducer examples
+# Form and User Inputs Examples
 
-This example covers how to use reducers and a couple different situations in which they are a good solution
+This example covers the basics of forms and how to handle user input
+
+## Install:
+
+- clone the repo
+- npm i
+- npm start
